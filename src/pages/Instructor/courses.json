@@ -1,0 +1,45 @@
+{
+    "courses": [
+        "amman-python-401d1",
+        "amman-python-401d2",
+        "amman-python-401d3",
+        "amman-python-401d4",
+        "amman-python-401d5",
+        "amman-python-401d6",
+        "amman-python-401d7",
+        "amman-java-401d1",
+        "amman-java-401d2",
+        "amman-java-401d3",
+        "amman-java-401d4",
+        "amman-javascript-401d1",
+        "amman-javascript-401d2",
+        "amman-javascript-401d3",
+        "amman-javascript-401d4",
+        "amman-javascript-401d5",
+        "amman-javascript-401d6",
+        "amman-javascript-401d7",
+        "amman-javascript-401d8"
+    ],
+
+    "rewards":[
+        "Add 2 marks",
+        "Open an assignment",
+        "Remove late"
+    ],
+
+    "students" : [
+        "Ahmad",
+        "Hadi",
+        "Rania",
+        "Emad",
+        "Aisha",
+        "Dario",
+        "Saja",
+        "Diala",
+        "Ammar",
+        "Batool",
+        "Saleh",
+        "Omar"
+
+    ]
+}
