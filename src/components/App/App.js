@@ -6,6 +6,7 @@ import Login from "../../pages/Login/Login";
 import Register from "../../pages/Register/Register";
 import TA from "../../pages/TA/TA";
 import Instructor from "../../pages/Instructor/Instructor";
+import Stds from "../../pages/TA/LoadStds";
 
 
 const App = () => {
@@ -17,6 +18,8 @@ const App = () => {
           <Route path="/" exact component={HomePage} />
           <Route path="/ta" exact component={TA} />
           <Route path="/instructor" exact component={Instructor} />
+          <Route path="/:Std" exact component={Stds} />
+
 
 
 

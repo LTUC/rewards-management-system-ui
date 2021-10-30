@@ -2,12 +2,12 @@ import React, { useEffect, useState } from "react";
 import {Box, Spinner, Flex, useToast} from '@chakra-ui/react'
 require('dotenv').config();
 import PageHeader from "../../components/PageHeader/PageHeader";
-import useResource from '../../hooks/useResource';
+import useCourseRs from '../../hooks/useCourseRs';
 import LoadCourses from "./LoadCourses";
 
 const Instructor = () => {
     const toast = useToast()
-    const {resources} = useResource(`${process.env.REACT_APP_HEROKU_ROOT}/courses/`)
+    const {resources} = useCourseRs(`${process.env.REACT_APP_HEROKU_ROOT}/courses/`)
     const [data, setData] = useState([])
 
     useEffect(()=>{

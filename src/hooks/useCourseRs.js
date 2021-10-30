@@ -3,11 +3,11 @@ import axios from 'axios';
 
 
 
-export default function useResource(apiUrl = '') {
- const toast = useToast()
+export default function useCourseRs(apiUrl = '') {
+  const toast = useToast()
 
   async function fetchResource() {
-    
+
 
     try {
       const response = await axios.get(apiUrl);
@@ -20,7 +20,7 @@ export default function useResource(apiUrl = '') {
 
   async function createResource(info) {
     try {
-      
+
       const result = await axios.post(apiUrl, info);
       return result
     } catch (error) {
@@ -29,7 +29,7 @@ export default function useResource(apiUrl = '') {
   }
 
 
-  async function updateResource(id,info) {
+  async function updateResource(id, info) {
     try {
       const url = apiUrl + id
       await axios.patch(url, info);
@@ -41,31 +41,31 @@ export default function useResource(apiUrl = '') {
   async function deleteResource(id) {
 
     try {
-        const url = apiUrl + id;
-        await axios.delete(url);
-       
+      const url = apiUrl + id;
+      await axios.delete(url);
+
     } catch (error) {
-        handleError(error);
+      handleError(error);
     }
-}
+  }
 
   // helper function to handle getting Authorization headers EXACTLY right
-//   function config(status = false, page: any = false, status_id: any = false) {
-//     return {
-//       headers: {
-//         Authorization: `Bearer ${ cookies.user.tokens.access }`,
-//         ...(status_id && { 'Content-Type': 'application/json' }),
-//       },
-//       params: {
-//         ...(status && { status }),
-//         ...(page && { page }),
-//       },
-//     };
-//   }
+  //   function config(status = false, page: any = false, status_id: any = false) {
+  //     return {
+  //       headers: {
+  //         Authorization: `Bearer ${ cookies.user.tokens.access }`,
+  //         ...(status_id && { 'Content-Type': 'application/json' }),
+  //       },
+  //       params: {
+  //         ...(status && { status }),
+  //         ...(page && { page }),
+  //       },
+  //     };
+  //   }
 
   function handleError(error) {
-    
-    
+
+
     toast({
       position: 'bottom',
       title: 'Error',
@@ -74,10 +74,10 @@ export default function useResource(apiUrl = '') {
       duration: 5000,
       isClosable: true,
     })
-    
-        
-    
-   
+
+
+
+
   }
 
   return {
