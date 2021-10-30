@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import {Box, Spinner, Flex, useToast} from '@chakra-ui/react'
-
+require('dotenv').config();
 import PageHeader from "../../components/PageHeader/PageHeader";
 import useResource from '../../hooks/useResource';
 import LoadCourses from "./LoadCourses";

@@ -1,5 +1,6 @@
 import React from "react";
 import { useForm } from "react-hook-form";
+require('dotenv').config();
 import {
     Box,
     Button,
@@ -88,7 +89,7 @@ const LoadCourses = ({ course }) => {
                                     <option value="Resubmit attempt">Resubmit attempt</option>
                                 </Select>
 
-                                {course.course.map(student => {
+                                {course.students.map(student => {
                                     
                                     return (
                                         <FormControl key={student.id}>
